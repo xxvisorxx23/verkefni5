@@ -1,0 +1,63 @@
+let h1 = document.createElement('h1');
+h1.innerHTML = "Nafn:Kristjan Ingi Ragnarsson";
+const container = document.querySelector('#container');
+const div = document.createElement('div');
+div.style.color = "black";
+div.style.borderStyle = "solid";
+div.style.padding = "10px";
+let h2 = document.createElement('h2');
+h2.innerHTML = "verkefni 5.1";
+let ul = document.createElement('ul');
+ul.innerHTML = "a. Afhverju er getElementById() fljótleglegasta aðferðin?";
+let ul2 = document.createElement('ul');
+ul2.innerHTML = "svar:af þvi að það fer strax ad idinu sem var set inn og svo stoppar strax";
+let ul3 = document.createElement('ul');
+ul3.innerHTML = "b. Hvað er málið með auða hnúta (e. whitespace nodes) og DOM tréið?";
+let ul4 = document.createElement('ul');
+ul4.innerHTML = "svar:það getur skaðad vandamál með skipulagi a vefsidu og getur skadið vandmál að með dominu með að búa til tóma noda";
+let ul5 = document.createElement('ul');
+ul5.innerHTML = "c.Hvað er static og live NodeList, hver er munurinn á NodeList og HTMLCollection?";
+let ul6 = document.createElement('ul');
+ul6.innerHTML = "svar:þegar nodelist er static þa breytir hann engu á dominu ef hann er live þá breytir hann dominu sjálfkrafa. nodelist vs htmlcollection nodelist er með allar typur af nodes medan htmlcollection er bara med element nodes og nodelist er með static og live en htmlcollection er bara með live";
+let ul7 = document.createElement('ul');
+ul7.innerHTML = "d. Hvað er event í eftirfarandi kóða og hvað er gert með því?";
+let ul8 = document.createElement('ul');
+ul8.innerHTML = "svar:linkurinn er eventið ef þu clickar á linkid keyrir hann event og skilar nope í console logið";
+let ul9 = document.createElement('ul');
+ul9.innerHTML = "e.Af þremur leiðum til að binda event þá er AddEventListener() nýjust en afhverju er hún betri en hinar? ";
+let ul10 = document.createElement('ul');
+ul10.innerHTML = "svar:með addeventlistener geturu verið með marga af events handlers og þu getur ekki óvart replacad önnur events sem er buið a skrifa";
+let ul11 = document.createElement('ul');
+ul11.innerHTML = "f.Hver er munurinn á true og false í AddEventListener?";
+let ul12 = document.createElement('ul');
+ul12.innerHTML = "svar:ef það er true keyrir hann useCapture og fer niður lista en ef það er false keyrir hann bubbling sem byrjar á bottninum og fer up listan";
+let ul13 = document.createElement('ul');
+ul13.innerHTML = "g. this vísar í Event listener á html element en ekki á object. Þú getur notað bind() til að breyta því, leystu eftirfarandi kóðadæmi með notkun á bind() til að birta í console “My name is Sam“ en ekki undefined.";
+let ul14 = document.createElement('ul');
+ul14.innerHTML = "svar:let buttonE1 = document;<br> let Person = {name: 'Sam',sayName: function(){<br>console.log('My name is '+ this.name);}};<br>buttonE1.addEventListener('click', Person.sayName.bind(Person)); ";
+container.appendChild(h1);
+div.appendChild(h2);
+div.appendChild(ul);
+div.appendChild(ul2);
+div.appendChild(ul3);
+div.appendChild(ul4);
+div.appendChild(ul5);
+div.appendChild(ul6);
+div.appendChild(ul7);
+div.appendChild(ul8);
+div.appendChild(ul9);
+div.appendChild(ul10);
+div.appendChild(ul11);
+div.appendChild(ul12);
+div.appendChild(ul13);
+div.appendChild(ul14);
+container.appendChild(div);
+
+let buttonE1 = document;
+  let Person = {
+    name: 'Sam',
+    sayName: function(){
+      console.log('My name is '+ this.name);
+    }
+  };
+  buttonE1.addEventListener('click', Person.sayName.bind(Person));
